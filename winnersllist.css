@@ -1,0 +1,451 @@
+body {
+  margin: 0;
+  font-family: 'Geist', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+.header {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+.logo-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo-bg {
+  width: 48px;
+  height: 48px;
+  background: #d92516;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-svg {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+.logo-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #111;
+}
+.logo-subtitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #111;
+}
+.banner {
+  background: #d92516;
+  color: #fff;
+  padding: 2rem 0 1.5rem 0;
+}
+.banner-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+.search-section {
+  background: #fff;
+  padding: 2rem 0;
+}
+.search-center {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.search-desc {
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.search-flex {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.search-input:focus {
+  border-color: #d92516;
+}
+.search-btn {
+  padding: 0 1.5rem;
+  background: #d92516;
+  color: #fff;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.search-btn:hover {
+  background: #b71c1c;
+}
+.search-icon {
+  font-size: 1.2rem;
+}
+.winners-section {
+  background: #fafafa;
+  padding: 2.5rem 0 2rem 0;
+}
+.winners-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d92516;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.winners-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.winner-card {
+  background: #fff;
+  border: 2px solid #d92516;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(217,37,22,0.07);
+  padding: 1.25rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  min-height: 170px;
+}
+.winner-card:hover {
+  box-shadow: 0 4px 16px rgba(217,37,22,0.13);
+  border-color: #b71c1c;
+}
+.winner-prize-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.7rem;
+}
+.winner-prize-amount {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #d92516;
+  background: #fff5f5;
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+.winner-prize-type {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  background: #f3f3f3;
+  padding: 0.18rem 0.6rem;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+.winner-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+.winner-ticket {
+  font-size: 0.98rem;
+  color: #555;
+  font-weight: 500;
+  background: #f7f7f7;
+  padding: 0.2rem 0.7rem;
+  border-radius: 6px;
+}
+.winner-meta {
+  margin-top: 0.4rem;
+  font-size: 0.97rem;
+  color: #666;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.winner-month {
+  color: #d92516;
+  font-weight: 600;
+}
+.winner-city {
+  color: #222;
+  font-weight: 500;
+}
+.grand-prize .winner-prize-amount {
+  background: linear-gradient(90deg, #ffd700 60%, #fffbe6 100%);
+  color: #b71c1c;
+}
+.second-prize .winner-prize-amount {
+  background: linear-gradient(90deg, #c0c0c0 60%, #f7f7f7 100%);
+  color: #b71c1c;
+}
+.third-prize .winner-prize-amount {
+  background: linear-gradient(90deg, #cd7f32 60%, #f7f7f7 100%);
+  color: #b71c1c;
+}
+.early-bird .winner-prize-type {
+  background: #ffe0e0;
+  color: #d92516;
+}
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.pagination-btn {
+  background: #d92516;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.pagination-btn:disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}
+.pagination-indicator {
+  font-size: 1.05rem;
+  color: #222;
+  font-weight: 500;
+}
+.winners-list-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+.winners-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(217,37,22,0.07);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.winners-list-table th, .winners-list-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+.winners-list-table th {
+  background: #d92516;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.winners-list-table tr {
+  border-bottom: 1px solid #f3f3f3;
+}
+.winners-list-table tr:last-child {
+  border-bottom: none;
+}
+.winners-list-table td {
+  color: #222;
+  font-weight: 500;
+}
+.winners-list-table .grand-prize td {
+  background: linear-gradient(90deg, #ffd700 60%, #fffbe6 100%);
+}
+.winners-list-table .second-prize td {
+  background: linear-gradient(90deg, #c0c0c0 60%, #f7f7f7 100%);
+}
+.winners-list-table .third-prize td {
+  background: linear-gradient(90deg, #cd7f32 60%, #f7f7f7 100%);
+}
+.winners-list-table .early-bird td {
+  background: #ffe0e0;
+}
+.winners-list-table .cash-prize td {
+  background: #fff;
+}
+.winners-list-table td.winner-prize-amount {
+  color: #d92516;
+  font-weight: bold;
+}
+.winners-list-table td.winner-prize-type {
+  color: #222;
+}
+.winners-list-table td.winner-month {
+  color: #d92516;
+}
+.winners-list-table td.winner-city {
+  color: #222;
+}
+.prize-filter-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d32f2f #fff;
+}
+.prize-filter-btn {
+  background: #fff;
+  border: 2px solid #d32f2f;
+  color: #d32f2f;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  min-width: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  white-space: normal;
+}
+.prize-filter-btn.active,
+.prize-filter-btn:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+
+/* -------------------- Responsive Styles -------------------- */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.97rem;
+    padding: 0 0.2rem;
+  }
+  .header-flex {
+    flex-direction: column;
+    padding: 1rem 0 0.5rem 0;
+    gap: 0.5rem;
+  }
+  .logo-bg {
+    width: 38px;
+    height: 38px;
+  }
+  .logo-svg {
+    width: 24px;
+    height: 24px;
+  }
+  .logo-title, .logo-subtitle {
+    font-size: 1rem;
+  }
+  .banner-title, .winners-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .search-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+  .search-input {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+  }
+  .search-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+  }
+  .winners-list-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .winner-card {
+    min-height: 120px;
+    padding: 1rem 0.5rem;
+  }
+  .winners-list-table th, .winners-list-table td {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .prize-filter-list {
+    gap: 0.2rem;
+    margin: 0.7rem 0 0.3rem 0;
+    padding-bottom: 0.3rem;
+  }
+  .prize-filter-btn {
+    min-width: 70px;
+    height: 48px;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+  }
+  .pagination-container {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .pagination-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.95rem;
+  }
+  .pagination-indicator {
+    font-size: 0.95rem;
+  }
+
+  /* --- Mobile-Friendly Winners List --- */
+  .winners-list-table thead {
+    display: none;
+  }
+  .winners-list-table,
+  .winners-list-table tbody,
+  .winners-list-table tr,
+  .winners-list-table td {
+    display: block;
+    width: 100%;
+  }
+  .winners-list-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 0.5rem;
+    background: #fff;
+  }
+  .winners-list-table td {
+    text-align: left;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .winners-list-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #d92516;
+    flex: 1;
+    padding-right: 0.5rem;
+    text-align: left;
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Personal Info</div>
+            </div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Payment</div>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Confirmation</div>
+            </div>
+        </div>
+
+        <!-- Step 1: Personal Information -->
+        <div class="form-step active" id="step-1">
+            <div class="form-container">
+                <h2>Personal Information</h2>
+                <form id="personal-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="province">Province *</label>
+                            <select id="province" name="province" required>
+                                <option value="">Select Province</option>
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="YT">Yukon</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postal">Postal Code *</label>
+                            <input type="text" id="postal" name="postal" required pattern="[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d" placeholder="A1A 1A1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <input type="text" id="country" name="country" value="Canada" readonly required>
+                    </div>
+
+                    <button type="button" class="btn-next" onclick="nextStep()">Continue to Payment</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Step 2: Payment Information -->
+        <div class="form-step" id="step-2">
+            <div class="form-container">
+                <h2>Payment Information</h2>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" name="cardNumber" required
+                               placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardHolder">Cardholder Name *</label>
+                        <input type="text" id="cardHolder" name="cardHolder" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date *</label>
+                            <input type="text" id="expiry" name="expiry" required
+                                   placeholder="MM/YY" maxlength="5">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">3 Digit PIN *</label>
+                            <input type="text" id="cvv" name="cvv" required
+                                   placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+
+                    <div class="security-info">
+                        <div class="security-icon">🔒</div>
+                        <div class="security-text">
+                            Your payment information is encrypted and secure
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" onclick="prevStep()">Back</button>
+                        <button type="button" class="btn-next" onclick="processPayment()">Process Payment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div class="form-step" id="step-3">
+            <div class="form-container">
+                <div class="confirmation-content">
+                    <div class="success-icon">✓</div>
+                    <h2>Payment Processing</h2>
+                    <p>Your payment will be processed within 24 hours.</p>
+                    <p>A confirmation email will be sent to your registered email address.</p>
+
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span>$99.99</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tax</span>
+                            <span>$8.00</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span>$107.99</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-primary" onclick="startOver()">Back To Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart&Stroke Lottery - Winter 2025 Winners List</title>
+  <link rel="stylesheet" href="winnersllist.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-flex">
+      <a href="index.html" class="logo-link">
+        <div class="logo-bg">
+          <svg viewBox="0 0 24 24" class="logo-svg">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-title">Heart&Stroke</div>
+          <div class="logo-subtitle">Lottery</div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Red Banner -->
+  <div class="banner">
+    <div class="container">
+      <h1 class="banner-title">Winter 2025 Winners List</h1>
+    </div>
+  </div>
+
+  <!-- Search Section -->
+  <div class="search-section">
+    <div class="container">
+      <div class="search-center">
+        <p class="search-desc">Search for a last name or ticket/order number</p>
+        <div class="search-flex">
+          <input type="text" id="searchInput" placeholder="Last name or ticket/order number" class="search-input" />
+          <button id="searchBtn" class="search-btn">
+            <span class="search-icon">🔍</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prize Filter List (Horizontal) -->
+  <div class="prize-filter-section">
+    <div class="container">
+      <div id="prizeFilterList" class="prize-filter-list">
+        <!-- Prize filter buttons will be rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Winners List Section -->
+  <div class="winners-section">
+    <div class="container">
+      <h2 class="winners-title">Winter 2025 Winners</h2>
+      <div class="winners-list-table-container">
+        <table class="winners-list-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Ticket</th>
+              <th>Prize Amount</th>
+              <th>Prize Type</th>
+              <th>Month</th>
+              <th>City</th>
+            </tr>
+          </thead>
+          <tbody id="winnersList">
+            <!-- Winner rows will be rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination-container">
+        <button id="prevPageBtn" class="pagination-btn" disabled>Previous</button>
+        <span id="pageIndicator" class="pagination-indicator"></span>
+        <button id="nextPageBtn" class="pagination-btn">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="winnerslist.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Ways to play</h4>
+          <ul>
+            <li><a href="#classic">Classic Lottery</a></li>
+            <li><a href="july.html">March Money</a></li>
+            <li><a href="draw.html">50/50 Draw</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Your support</h4>
+          <ul>
+            <li><a href="impact.html">Your impact</a></li>
+            <li><a href="https://order.heartandstrokelottery.ca/winners?_gl=1*r65m22*_gcl_au*MTMyNTk4OTc1MC4xNzUyNzk5MjU5Ljc5NjE4MzI2MS4xNzUzNTk5MDc2LjE3NTM1OTkwNzU.*_ga*MTU5ODQ4OTY3LjE3NTI3OTkyNjA.*_ga_5JZB2QBRQY*czE3NTM2Mjg0MTckbzckZzEkdDE3NTM2MzExMTUkajM2JGwwJGgw">Check your tickets</a></li>
+            <li><a href="winners.html">Meet previous winners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#dates">Key dates</a></li>
+            <li><a href="#rules">Rules and regulations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Our sites</h4>
+          <ul>
+            <li><a href="#heartandstroke">Heart & Stroke</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-address">
+        <div class="address-info">
+          <span class="location-icon">📍</span>
+          <span>2300 Yonge St., Suite 1200, Box 2414 Toronto ON M4P 1E4</span>
+        </div>
+        <a href="donations.html" class="footer-donate-btn">Donate</a>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="terms.html">Terms of use</a>
+          <a href="consumer.html">Consumer protection</a>
+          <a href="privacy.html">Privacy policy</a>
+          <a href="#sitemap">Sitemap</a>
+        </div>
+
+        <div class="social-links">
+          <a href="#facebook" class="social-link">f</a>
+          <a href="#instagram" class="social-link">📷</a>
+          <a href="#twitter" class="social-link">🐦</a>
+          <a href="#youtube" class="social-link">📺</a>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p>
+          *Based on information available regarding charity lotteries in Ontario at the time of license issue. |
+          © Heart and Stroke Foundation of Canada, 2025. All rights reserved. Unauthorized use prohibited.
+          "Heart & Stroke Lottery, and the heart and / Icon on its own or followed by another icon or words are
+          trademarks of the Heart and Stroke Foundation of Canada. Charitable Registration No. 106846942 RR0001. |
+          TICKETS VALID ONLY FOR SPRING 2025 HEART & STROKE LOTTERY. Classic Lottery Licence: #RAF1444518,
+          50/50 Lottery Licence: #RAF1444519, July Money Lottery Licence: #RAF1444521. Prizes awarded may not be
+          exactly as shown. All net proceeds from the lottery go directly to life-saving research in support of our
+          mission to prevent disease, save lives and promote recovery from heart disease and stroke benefiting
+          residents of Ontario. PLAY RESPONSIBLY - The Ontario Problem Gambling Helpline provides information about
+          problem gambling services in Ontario. For help call toll-free at 1-866-531-2600 or visit www.connexontario.ca.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

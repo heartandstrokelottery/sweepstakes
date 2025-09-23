@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winners | Heart and Stroke Lottery</title>
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Page-specific Stylesheet -->
+  <link rel="stylesheet" href="prize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styles for hidden prizes */
+    .hidden-prize {
+      display: none;
+    }
+    
+    .prizes-grid.show-all .hidden-prize {
+      display: block;
+    }
+    
+    .see-all-btn.active {
+      background: #b63d33;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Confetti Animation Container -->
+  <div id="confetti-container"></div>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <ul class="top-nav">
+        <li><a href="contact.html">Contact us</a> | <a href="mailto:ontarioheartandstrokes.ca@gmail.com">ontarioheartandstrokes.ca@gmail.com</a> | (647) 391-4881</li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="https://ext.same-assets.com/4237121742/3635559279.svg" alt="Heart & Stroke logo" class="logo-img">
+        </a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="prizes.html">All Classic Lottery prizes</a></li>
+            <li class="dropdown">
+              <a href="index.html#add-ons">Add ons</a>
+              <ul class="dropdown-menu">
+                <li><a href="draw.html">50/50 Lottery</a></li>
+                <li><a href="july.html">March Money</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="index.html#winners">Winners</a>
+              <ul class="dropdown-menu">
+                               <li><a href="winnerslist.html">Check your tickets</a></li>
+                <li><a href="winners.html">Meet previous winners</a></li>
+              </ul>
+            </li>
+            <li><a href="impact.html">Your impact</a></li>
+          </ul>
+        </nav>
+        <a href="donations.html" class="donate-btn">Donate</a>
+      </div>
+    </div>
+  </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://ext.same-assets.com/4237121742/3229072904.webp" alt="Assortment of prizes" class="hero-bg-img">
+            <div class="odds-banner">
+                <span class="odds-text">1 to 2 odds</span>
+                <span class="odds-subtext">of winning!</span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">
+                    Thousands of<br>
+                    dream-worthy<br>
+                    prizes.
+                </h1>
+                <p class="hero-description">
+                    Including 5 Grand Prizes and so much more! From luxury cars and stylish boats to the latest tech and serious cash, there are so many prizes to be won!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Prizes Count Banner -->
+    <div class="prizes-count-banner" style="text-align:center; font-weight:bold; font-size:2.2rem; margin: 3.5rem 0 2.5rem 0;">
+        Over 40,880 prizes to take home!
+    </div>
+    <!-- Prizes Section -->
+    <section class="prizes-section">
+        <div class="container">
+            <div class="prizes-grid" id="prizes-grid">
+                <!-- Grand Prize 1 & 2 -->
+                <div class="prize-card">
+                    <div class="prize-image">
+                        <img src="https://ext.same-assets.com/4237121742/2146058384.webp" alt="Cash prize" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Grand Prizes - February 6, 2026</div>
+                        <h3 class="prize-title">Grand Prize 1 & 2 – Two prizes of $1 Million cash!</h3>
+                        <p class="prize-description">What dream will $1 Million bring to life for you?</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                <!-- Grand Prize 3 -->
+                <div class="prize-card">
+                    <div class="prize-image">
+                        <img src="https://ext.same-assets.com/4237121742/3580904317.webp" alt="BMW car" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Grand Prizes - February 6, 2026</div>
+                        <h3 class="prize-title">Grand Prize 3 – Pick a BMW M440i Cabriolet or a BMW X5.</h3>
+                        <p class="prize-description">Or, take home $110,000 cash!</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                <!-- Grand Prize 4 -->
+                <div class="prize-card">
+                    <div class="prize-image">
+                        <img src="https://ext.same-assets.com/4237121742/1193190384.webp" alt="Toyota Tacoma" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Grand Prizes - February 6, 2026</div>
+                        <h3 class="prize-title">Grand Prize 4 – A Toyota Tacoma TRD Sport Premium 4x4.</h3>
+                        <p class="prize-description">Or, take home $55,000 cash!</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                <!-- Grand Prize 5 -->
+                <div class="prize-card">
+                    <div class="prize-image">
+                        <img src="https://ext.same-assets.com/4237121742/2757142098.webp" alt="Legend Pontoon Boat" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Grand Prizes - February 6, 2026</div>
+                        <h3 class="prize-title">Grand Prize 5 - A Legend Pontoon Boat 21 Halo 360 Phoenix Sport.</h3>
+                        <p class="prize-description">Or, take home $50,000 cash!</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                <!-- Loyalty Prize -->
+                <div class="prize-card">
+                    <div class="prize-image">
+                        <img src="https://ext.same-assets.com/4237121742/2107805689.webp" alt="Outdoor packages" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Loyalty - April 25, 2026</div>
+                        <h3 class="prize-title">4 ultimate outdoor packages.</h3>
+                        <p class="prize-description">Or, take home $5,000 cash!</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                <!-- Flash Bonus -->
+                <div class="prize-card">
+                    <div class="prize-image">
+                        <img src="https://ext.same-assets.com/4237121742/2127429089.webp" alt="Kawasaki Jet Ski" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Flash Bonus - May 16, 2026</div>
+                        <h3 class="prize-title">A Kawasaki Jet Ski!</h3>
+                        <p class="prize-description">Make your summer weekends more epic!</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                
+                <!-- Additional Hidden Prizes -->
+                <div class="prize-card hidden-prize">
+                    <div class="prize-image">
+                        <img src="https://www.heartandstrokelottery.ca/-/media/lottery-s25/vip_700x456.webp?rev=44bb57515b9745da8081b1184faa472f&mw=485&mh=317&hash=52E56CE39D8A0E8759650B6414515117" alt="Cash prize" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Bonus Prize - February 6, 2026</div>
+                        <h3 class="prize-title">A $50,000 cash prize!</h3>
+                        <p class="prize-description">Win $50,000 to finally tick off those dream experiences!    </p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                
+                <div class="prize-card hidden-prize">
+                    <div class="prize-image">
+                        <img src="https://www.heartandstrokelottery.ca/-/media/lottery-s25/early_bird_image1_700x456.webp?rev=f4d7a97b54c84243ad3cbc4a94b5a973&mw=485&mh=317&hash=435B5467A15B50C4881E942AA434458D alt="Luxury vacation" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Bonus Prize - February 6, 2026</div>
+                        <h3 class="prize-title">An Airstream Basecamp 20X!</h3>
+                        <p class="prize-description">Or take home $100,000 in cash</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                
+                <div class="prize-card hidden-prize">
+                    <div class="prize-image">
+                        <img src="https://www.heartandstrokelottery.ca/-/media/lottery-s25/vacations_universal_700x456.webp?rev=0d1a1db6a4f9485189060daba062d50b&mw=485&mh=317&hash=E21E306E754C7E0F7BB7975D3B93F206" alt="Home entertainment" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Bonus Prize - February 6, 2026</div>
+                        <h3 class="prize-title">Two $10,000 cash prizes.</h3>
+                        <p class="prize-description">Win 1 of 2 $10,000 cash prizes to fund your next travel experience! </p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                
+                <div class="prize-card hidden-prize">
+                    <div class="prize-image">
+                        <img src="https://www.heartandstrokelottery.ca/-/media/lottery-s25/electronics-appliances700x456.webp?rev=ce1890eeeb0e4eb1b6a600b6ea5c2612&mw=485&mh=317&hash=F706CB359221CD21E7D691C69C879DA9" alt="Shopping spree" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Bonus Prize - February 6, 2026</div>
+                        <h3 class="prize-title">You could win Samsung 65" 4K TVs, Dyson V8 Vacuums, SMEG espresso makers, AirPods headphones, and so much more!</h3>
+                        <p class="prize-description">Shop till you drop at your favorite retail stores.</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                
+                <div class="prize-card hidden-prize">
+                    <div class="prize-image">
+                        <img src="https://www.heartandstrokelottery.ca/-/media/lottery-s25/more_prizes_paddleboard_only_700x456.webp?rev=39a271fc40de4178a8931fb5bdda18f9&mw=485&mh=317&hash=45A63493180D08E8E1FF8EA7793BF0F2 alt="Luxury watch" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Bonus Prize - February 6, 2026</div>
+                        <h3 class="prize-title">Two 10’6″ iSUP Braddah Paddleboards.</h3>
+                        <p class="prize-description">Lightweight and easily tranfportable, ready for next aquatic adventure</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+                
+                <div class="prize-card hidden-prize">
+                    <div class="prize-image">
+                        <img src="https://www.heartandstrokelottery.ca/-/media/lottery-s25/more_prizes_retail_logos_700x456.webp?rev=5a66a255d5eb48bbaa757d120dd1a658&mw=485&mh=317&hash=F694DF5F154177100956B7F8B45BB233 alt="Tech bundle" class="prize-img">
+                    </div>
+                    <div class="prize-content">
+                        <div class="prize-meta">Gift Cards - February 6, 2026</div>
+                        <h3 class="prize-title">Gifts from your favorite brands</h3>
+                        <p class="prize-description">Over 35,000 prizes of retail gift cards.</p>
+                        <button class="learn-more-btn">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="see-all-prizes">
+                <button class="see-all-btn" id="see-all-btn">See all prizes</button>
+            </div>
+        </div>
+    </section>
+    <!-- Thanks Section -->
+    <section class="thanks-section">
+        <div class="thanks-bg">
+            <img src="https://ext.same-assets.com/4237121742/1014849368.webp" alt="Group photo of families" class="thanks-bg-img">
+        </div>
+        <div class="thanks-content">
+            <h2 class="thanks-title">Thanks for making<br>a difference!</h2>
+        </div>
+    </section>
+    <!-- Bottom Newsletter Section -->
+    <section class="bottom-newsletter-section">
+        <div class="container">
+            <div class="bottom-newsletter-content">
+                <h2 class="bottom-newsletter-title">Don't miss your chance<br>to win lottery prizes!</h2>
+                <p class="bottom-newsletter-description">
+                    Every ticket helps save lives. Sign up to receive updates from the Heart & Stroke Lottery tailored just for you – from our winners, to upcoming dates, and research initiatives to support our foundation and more.
+                </p>
+                <form class="bottom-newsletter-form">
+                    <div class="form-group">
+                        <label for="fullname" class="form-label">Your full name</label>
+                        <input type="text" id="fullname" name="fullname" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="email2" class="form-label">Your email address</label>
+                        <input type="email" id="email2" name="email2" class="form-input">
+                    </div>
+                    <div class="recaptcha-container">
+                        <div class="recaptcha-checkbox">
+                            <input type="checkbox" id="recaptcha2" name="recaptcha2">
+                            <label for="recaptcha2">I'm not a robot</label>
+                            <img src="https://ext.same-assets.com/4237121742/1964778501.png" alt="reCAPTCHA" class="recaptcha-logo">
+                        </div>
+                    </div>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Help Save Lives Section -->
+    <section class="help-save-lives">
+        <div class="container">
+            <h2 class="help-title">
+                <span class="help-red">Help save lives.</span> Win amazing prizes.
+            </h2>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Ways to play</h3>
+                    <ul class="footer-links">
+                        <li><a href="prizes.html" class="footer-link">Classic Lottery</a></li>
+                        <li><a href="july.html" class="footer-link">March Money</a></li>
+                        <li><a href="draw.html" class="footer-link">50/50 Draw</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">About us</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Key dates</a></li>
+                        <li><a href="#" class="footer-link">Rules and regulations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Your support</h3>
+                    <ul class="footer-links">
+                        <li><a href="impact.html" class="footer-link">Your impact</a></li>
+                        <li><a href="winnerslist.html" class="footer-link">Check your tickets</a></li>
+                        <li><a href="winners.html" class="footer-link">Meet previous winners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Our sites</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Heart & Stroke</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-address">
+                <p class="address-text">
+                    📍 2300 Yonge St., Suite 1200, Box 2414 Toronto ON M4P 1E4
+                </p>
+                <a href="https://app-hsfdonation.heartandstroke.ca/?pagename=DMDonationForm&s_locale=en_CA&s_fT=cont&s_pres=hsweb&s_cscid=hsweb_lottery&_gl=1*u7kugy*_gcl_au*MTMyNTk4OTc1MC4xNzUyNzk5MjU5*_ga*MTU5ODQ4OTY3LjE3NTI3OTkyNjA.*_ga_5JZB2QBRQY*czE3NTM1OTUyNTkkbzUkZzEkdDE3NTM1OTU3MTYkajU1JGwwJGgw" class="footer-donate-btn">
+                    <span class="heart-icon">♥</span> Donate
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="terms.html" class="legal-link">Terms of use</a>
+                    <a href="consumer.html" class="legal-link">Consumer protection</a>
+                    <a href="privacy.html" class="legal-link">Privacy policy</a>
+                    <a href="#" class="legal-link">Sitemap</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <img src="https://ext.same-assets.com/4237121742/456086913.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="https://ext.same-assets.com/4237121742/2837182927.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="https://ext.same-assets.com/4237121742/1681585726.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="https://ext.same-assets.com/4237121742/4171513509.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <div class="foundation-logo">
+                    <img src="https://ext.same-assets.com/4237121742/1909525686.svg" alt="Foundation logo">
+                </div>
+                <p class="disclaimer-text">
+                    *Based on information available regarding charity lotteries in Ontario at the time of license issue. | © Heart and Stroke Foundation of Canada, 2026. All rights reserved. Unauthorized use prohibited. **Heart & Stroke Lottery, and the heart and / Icon on its own or followed by another icon or words are trademarks of the Heart and Stroke Foundation of Canada. Charitable Registration No. 106846942 RR0001. | TICKETS VALID ONLY FOR SPRING 2026 HEART & STROKE LOTTERY. Classic Lottery Licence: #RAF1444518, 50/50 Lottery Licence: #RAF1444519, July Money Lottery Licence: #RAF1444521. Prizes awarded may not be exactly as shown. All net proceeds from the lottery go directly to life-saving research in support of our mission to prevent disease, save lives and promote recovery from heart disease and stroke benefiting residents of Ontario. PLAY RESPONSIBLY - The Ontario Problem Gambling Helpline provides information about problem gambling services in Ontario. For help call toll-free at 1-866-531-2600 or visit www.connexontario.ca.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        // JavaScript for showing additional prizes
+        document.addEventListener('DOMContentLoaded', function() {
+            const seeAllBtn = document.getElementById('see-all-btn');
+            const prizesGrid = document.getElementById('prizes-grid');
+            
+            seeAllBtn.addEventListener('click', function() {
+                prizesGrid.classList.toggle('show-all');
+                
+                if (prizesGrid.classList.contains('show-all')) {
+                    seeAllBtn.textContent = 'Show less prizes';
+                    seeAllBtn.classList.add('active');
+                } else {
+                    seeAllBtn.textContent = 'See all prizes';
+                    seeAllBtn.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

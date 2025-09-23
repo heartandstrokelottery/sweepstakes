@@ -1,0 +1,147 @@
+/* Donation Page Styles */
+.donation-section {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.donation-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.donation-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.donation-type, .donation-amount {
+    margin-bottom: 40px;
+}
+
+.donation-type h2, .donation-amount h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.donation-options, .amount-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.donation-option, .amount-option {
+    flex: 1;
+    min-width: 120px;
+    position: relative;
+}
+
+.donation-option input[type="radio"],
+.amount-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.option-text, .amount-text {
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    background: #f5f5f5;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.donation-option input[type="radio"]:checked + .option-text,
+.amount-option input[type="radio"]:checked + .amount-text {
+    background: #da2415;
+    color: white;
+    border-color: #da2415;
+}
+
+.option-text:hover, .amount-text:hover {
+    border-color: #da2415;
+}
+
+.custom-amount {
+    margin-top: 20px;
+}
+
+.custom-amount label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.input-wrapper {
+    position: relative;
+    max-width: 200px;
+}
+
+.currency-symbol {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.custom-amount input[type="number"] {
+    width: 100%;
+    padding: 12px 12px 12px 30px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-next {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #da2415;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-next:hover {
+    background: #b41d11;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-section {
+        padding: 40px 20px;
+    }
+
+    .donation-container {
+        padding: 20px;
+    }
+
+    .donation-options, .amount-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .donation-option, .amount-option {
+        width: 100%;
+    }
+}

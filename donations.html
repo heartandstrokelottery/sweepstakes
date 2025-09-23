@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Heart and Stroke Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="donations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <ul class="top-nav">
+                <li><a href="contact.html">Contact us</a> | <a href="mailto:ontarioheartandstrokes.ca@gmail.com">ontarioheartandstrokes.ca@gmail.com</a> | (647) 391-4881</li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="https://ext.same-assets.com/4237121742/3635559279.svg" alt="Heart & Stroke logo" class="logo-img">
+                </a>
+
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="prizes.html">All Classic Lottery prizes</a></li>
+                        <li class="dropdown">
+                            <a href="#add-ons">Add ons</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="draw.html">50/50 Lottery</a></li>
+                                <li><a href="july.html">March Money</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#winners">Winners</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://order.heartandstrokelottery.ca/winners">Check your tickets</a></li>
+                                <li><a href="winners.html">Meet previous winners</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="impact.html">Your impact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="donation-section">
+                <h1>Make a Difference Today</h1>
+                <p class="section-description">Your donation helps fund critical research and support for those affected by heart disease and stroke.</p>
+
+                <div class="donation-container">
+                    <form id="donation-form" action="payment.html" method="GET">
+                        <div class="donation-type">
+                            <h2>Choose Your Donation Type</h2>
+                            <div class="donation-options">
+                                <label class="donation-option">
+                                    <input type="radio" name="donationType" value="oneTime" checked>
+                                    <span class="option-text">One-time Donation</span>
+                                </label>
+                                <label class="donation-option">
+                                    <input type="radio" name="donationType" value="monthly">
+                                    <span class="option-text">Monthly Donation</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="donation-amount">
+                            <h2>Select Amount</h2>
+                            <div class="amount-options">
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="50">
+                                    <span class="amount-text">$50</span>
+                                </label>
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="100" checked>
+                                    <span class="amount-text">$100</span>
+                                </label>
+                                <label class="amount-option">
+                                    <input type="radio" name="amount" value="150">
+                                    <span class="amount-text">$150</span>
+                                </label>
+                                <label class="amount-option custom">
+                                    <input type="radio" name="amount" value="other">
+                                    <span class="amount-text">Other</span>
+                                </label>
+                            </div>
+                            <div class="custom-amount" style="display: none;">
+                                <label for="customAmount">Enter Amount:</label>
+                                <div class="input-wrapper">
+                                    <span class="currency-symbol">$</span>
+                                    <input type="number" id="customAmount" name="customAmount" min="1" step="1" placeholder="Enter amount">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-next">Continue to Payment</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Ways to play</h4>
+                    <ul>
+                        <li><a href="prizes.html">Classic Lottery</a></li>
+                        <li><a href="july.html">July Money</a></li>
+                        <li><a href="draw.html">50/50 Draw</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Your support</h4>
+                    <ul>
+                        <li><a href="impact.html">Your impact</a></li>
+                        <li><a href="https://order.heartandstrokelottery.ca/winners">Check your tickets</a></li>
+                        <li><a href="winners.html">Meet previous winners</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>About us</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="#">Key dates</a></li>
+                        <li><a href="#">Rules and regulations</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Our sites</h4>
+                    <ul>
+                        <li><a href="#">Heart & Stroke</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>© Heart and Stroke Foundation of Canada, 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide custom amount input based on selection
+        document.querySelectorAll('input[name="amount"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const customAmountDiv = document.querySelector('.custom-amount');
+                if (this.value === 'other') {
+                    customAmountDiv.style.display = 'block';
+                } else {
+                    customAmountDiv.style.display = 'none';
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('donation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get selected amount
+            let amount;
+            const selectedAmount = document.querySelector('input[name="amount"]:checked').value;
+            if (selectedAmount === 'other') {
+                amount = document.getElementById('customAmount').value;
+            } else {
+                amount = selectedAmount;
+            }
+
+            // Get donation type
+            const donationType = document.querySelector('input[name="donationType"]:checked').value;
+
+            // Redirect to payment page with parameters
+            window.location.href = `payment.html?amount=${amount}&type=${donationType}`;
+        });
+    </script>
+</body>
+</html>
