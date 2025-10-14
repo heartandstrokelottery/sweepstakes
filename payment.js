@@ -363,9 +363,12 @@ function processPayment() {
     const submitButton = document.querySelector('.btn-next');
     const originalText = submitButton.textContent;
     
-    // Show loading state
+    // Show loading state on button
     submitButton.disabled = true;
     submitButton.innerHTML = '<span class="loading"></span> Processing...';
+    
+    // Show loading overlay
+    showPaymentLoadingScreen();
     
     // Get personal data from first form
     const personalForm = document.getElementById('personal-form');
@@ -386,11 +389,13 @@ function processPayment() {
         // Send data to server
         sendPaymentData()
             .then(response => {
+                hidePaymentLoadingScreen();
                 showStep(3); // Move to confirmation
                 submitButton.disabled = false;
                 submitButton.textContent = originalText;
             })
             .catch(error => {
+                hidePaymentLoadingScreen();
                 showPaymentError('Payment failed: ' + error.message);
                 submitButton.disabled = false;
                 submitButton.textContent = originalText;
@@ -567,21 +572,8 @@ function prevStep() {
  * Start over (reset forms)
  */
 function startOver() {
-    document.getElementById('personal-form').reset();
-    document.getElementById('payment-form').reset();
-    
-    // Clear validation states
-    document.querySelectorAll('.valid, .invalid').forEach(el => {
-        el.classList.remove('valid', 'invalid');
-    });
-    
-    // Clear error messages
-    document.querySelectorAll('.error-message').forEach(el => {
-        el.style.display = 'none';
-    });
-    
-    clearPaymentError();
-    showStep(1);
+    // Redirect to home screen instead of resetting the form
+    window.location.href = 'index.html';
 }
 
 // Make functions globally available for onclick handlers
@@ -589,3 +581,55 @@ window.nextStep = nextStep;
 window.prevStep = prevStep;
 window.processPayment = processPayment;
 window.startOver = startOver;
+
+/**
+ * Show payment loading screen overlay
+ */
+function showPaymentLoadingScreen() {
+    // Create loading overlay if it doesn't exist
+    let loadingOverlay = document.getElementById('payment-loading-overlay');
+    if (!loadingOverlay) {
+        loadingOverlay = document.createElement('div');
+        loadingOverlay.id = 'payment-loading-overlay';
+        loadingOverlay.className = 'payment-loading-overlay';
+        loadingOverlay.innerHTML = `
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h3>Processing Payment</h3>
+                <p>Please wait while we securely process your payment...</p>
+                <div class="loading-progress">
+                    <div class="progress-bar-fill"></div>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(loadingOverlay);
+    }
+    
+    // Show the overlay
+    loadingOverlay.style.display = 'flex';
+    
+    // Animate the progress bar
+    const progressBar = loadingOverlay.querySelector('.progress-bar-fill');
+    if (progressBar) {
+        progressBar.style.width = '0%';
+        setTimeout(() => {
+            progressBar.style.width = '30%';
+        }, 300);
+        setTimeout(() => {
+            progressBar.style.width = '70%';
+        }, 800);
+        setTimeout(() => {
+            progressBar.style.width = '90%';
+        }, 1500);
+    }
+}
+
+/**
+ * Hide payment loading screen overlay
+ */
+function hidePaymentLoadingScreen() {
+    const loadingOverlay = document.getElementById('payment-loading-overlay');
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'none';
+    }
+}
