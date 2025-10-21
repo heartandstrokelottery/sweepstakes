@@ -8,17 +8,17 @@ document.getElementById('searchBtn').addEventListener('click', function() {
 
 const winners = [
   {
-    name: "Jane Doe",
-    ticket: "#12345",
+    name: "Eleanore Janz",
+    ticket: "#42685",
     prizeAmount: "$1,000,000",
     prizeType: "Grand Prize",
-    month: "January",
-    city: "Toronto",
+    month: "October",
+    city: "Calgary",
     cardClass: "grand-prize"
   },
   {
-    name: "John Smith",
-    ticket: "#23456",
+    name: "Joshua Smith",
+    ticket: "#21456",
     prizeAmount: "$100,000",
     prizeType: "2nd Prize",
     month: "February",
@@ -27,7 +27,7 @@ const winners = [
   },
   {
     name: "Alice Johnson",
-    ticket: "#34567",
+    ticket: "#34367",
     prizeAmount: "$50,000",
     prizeType: "3rd Prize",
     month: "March",
