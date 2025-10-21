@@ -21,7 +21,7 @@ const winners = [
     ticket: "#21456",
     prizeAmount: "$100,000",
     prizeType: "2nd Prize",
-    month: "February",
+    month: "September",
     city: "Vancouver",
     cardClass: "second-prize"
   },
