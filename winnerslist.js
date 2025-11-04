@@ -17,12 +17,12 @@ const winners = [
     cardClass: "grand-prize"
   },
   {
-    name: "Joshua Smith",
-    ticket: "#21456",
+    name: "David J Morrison",
+    ticket: "#21446",
     prizeAmount: "$100,000",
     prizeType: "2nd Prize",
-    month: "September",
-    city: "Vancouver",
+    month: "November",
+    city: "Peace River",
     cardClass: "second-prize"
   },
   {
